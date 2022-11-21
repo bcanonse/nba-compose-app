@@ -1,7 +1,6 @@
 package com.bcanon.nbaappcompose
 
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
-import android.content.res.Resources.Theme
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -41,6 +40,11 @@ fun Greeting(name: String) {
 @Composable
 fun DefaultPreview() {
     NbaAppComposeTheme {
-        Greeting("Android")
+        Surface(
+            modifier = Modifier.fillMaxSize(),
+            color = MaterialTheme.colors.background
+        ) {
+            Greeting("Android")
+        }
     }
 }
